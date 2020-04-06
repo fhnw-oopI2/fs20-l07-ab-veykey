@@ -21,7 +21,6 @@ final class ObservableCollection extends VBox {
 		layoutControls();
 	}
 
-	// TEST
 	private void initializeControls() {
 		String[] names = { "Anna", "Beatrice", "Charles", "Donald" };
 		observableList = FXCollections.observableArrayList(names);

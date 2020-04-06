@@ -9,6 +9,7 @@ public class ApplicationUI extends FlowPane {
 
 	private Button button;
 	int index = 1;
+
 	public ApplicationUI() {
 		initializeControls();
 		layoutControls();

@@ -7,7 +7,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
-public class ApplicationUI extends VBox{
+public class ApplicationUI extends VBox {
 
 	private Slider slider;
 	private Label label;
@@ -30,7 +30,7 @@ public class ApplicationUI extends VBox{
 		setPadding(new Insets(10));
 		setAlignment(Pos.CENTER);
 		getChildren().addAll(label, slider);
-	
+
 		slider.setShowTickMarks(true);
 		slider.setShowTickLabels(true);
 		slider.setBlockIncrement(0.5f);
