@@ -9,28 +9,29 @@ import javafx.scene.control.ToolBar;
 import javafx.scene.layout.VBox;
 
 final class ObservableCollection extends VBox {
-	
+
 	private ObservableList<String> observableList;
-	
+
 	private Button shuffle;
 	private ToolBar toolBar;
 	private ListView<String> listView;
-	
+
 	ObservableCollection() {
 		initializeControls();
 		layoutControls();
 	}
-	//TEST
+
+	// TEST
 	private void initializeControls() {
-		String[] names = {"Anna", "Beatrice", "Charles", "Donald"};
+		String[] names = { "Anna", "Beatrice", "Charles", "Donald" };
 		observableList = FXCollections.observableArrayList(names);
-		
+
 		shuffle = new Button("Shuffle");
 		toolBar = new ToolBar(shuffle);
-		
-		listView = new ListView<>(observableList);	
+		shuffle.setOnAction(event -> FXCollections.shuffle(observableList));
+		listView = new ListView<>(observableList);
 	}
-	
+
 	private void layoutControls() {
 		setPadding(new Insets(20));
 		setSpacing(20);
